@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="url_for('static', filename='css/style.css')}}">
+    <title>HTML Table</title>
+</head>
+<body>
+    
+    <h1>Students</h1>
+    <h2>First Name</h2>
+    <h2>Last Name</h2>
+    <h2>Full Name</h2>
+
+    <!-- <table>
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Full Name</th>
+        </tr> -->
+        <ul>
+            {% for student in users %}
+            <li>{{student['first_name']}}  {{student['last_name']}}  {{student['first_name'] +  student['last_name']}}
+            </li>
+            {% endfor %}
+        </ul>
+        <!-- {% for student in users %}
+        <td>{{ student['first_name'] }}
+        </td>
+        <td>{{ student['last_name'] }}
+        </td>
+        <td>{{student['first_name'+'last_name']}}
+        </td>
+        {% endfor %}
+        
+        </tr> -->
+    </table>
+</body>
+</html>

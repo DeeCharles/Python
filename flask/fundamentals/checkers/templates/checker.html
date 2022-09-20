@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
+    
+    <style>
+
+        .box1 {
+            background-color: {{color1}};
+            width: 20px;
+            height: 20px;
+    
+        }
+        .box2 {
+            background-color:{{color2}};
+            width: 20px;
+            height: 20px;
+        }
+        
+
+    </style>
+
+    <title>Checker Board</title>
+</head>
+<body>
+    <div class="main_box">
+        {% for row in range(num2) %}
+        <div class="row">
+            {% for col in range(num) %}
+                {% if (row+col)%2 == 0 %}
+                    <div class="boxes box1"></div>
+                {%else%}
+                    <div class="boxes box2"></div>
+                {%endif%}
+            {%endfor%}
+        </div>
+        {%endfor%}
+    </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

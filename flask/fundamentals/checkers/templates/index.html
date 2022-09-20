@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Checker Board</title>
+    <style>
+        .color1 {
+            background-color: black;
+            width: 20px;
+            height: 20px;
+        }
+        .color2 {
+            background-color: red;
+            width: 20px;
+            height: 20px;
+        }
+        
+    </style>
+</head>
+<body>
+    <!-- <p class=wrapper></p>
+        <div><p class="color1"></p></div>
+        <div><p class="color2"></p></div>
+        <div>class=color1</div>
+        <div>class=color2</div>
+        <div>class=color1</div>
+        <div>class=color2</div>
+        <div>class=color1</div>
+        <div>class=color2</div> -->
+    <table>
+        <tr>
+
+        </tr>
+    </table>
+
+<table>
+    {%for h in range (0,height):%}
+    <tr>
+        <td class="color1"></td>
+        <td class="color2"></td>
+        <td class="color1"></td>
+        <td class="color2"></td>
+        <td class="color1"></td> 
+        <td class="color2"></td>
+        <td class="color1"></td>
+        <td class="color2"></td>
+    </tr>
+    <tr>
+        <td class="color2"></td>
+        <td class="color1"></td>
+        <td class="color2"></td>
+        <td class="color1"></td> 
+        <td class="color2"></td>
+        <td class="color1"></td>
+        <td class="color2"></td>
+        <td class="color1"></td>
+    </tr>
+    {%endfor%}
+</table>
+
+
+</body>
+</html>

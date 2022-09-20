@@ -1,0 +1,13 @@
+SELECT name
+FROM names;
+INSERT INTO names (name)
+VALUES('Dewanda');
+SELECT * from names;
+DELETE  FROM names where id=3;
+UPDATE names
+SET name = 'Gwendolyn'
+WHERE id=6;
+
+
+INSERT INTO names(name)
+VALUES('Dewanda'), ('Peggy'), ('Gwen');
