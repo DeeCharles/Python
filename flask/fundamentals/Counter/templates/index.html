@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Counter<h1>
+    <div>
+        {{session["count"]}}
+    </div>
+    <div class=main>
+        <a href="/increment"><button class="button">+2</button>
+        </a>
+        <form action='/reset' method='post'>
+        <button class="button2">Reset</button>
+        </form>
+    </div>
+    <form action='/form/<increment>' method="post">
+
+    </form>
+
+    
+    
+
+<!-- <form action='/users' method='post'>
+    <label for='name'>Name:</label>
+    <input type='text' name='name'>
+    <label for='email'>Email:</label>
+    <input type='text' name='email'>
+    <input type='submit' value='create user'>
+</form> -->
+</body>
+</html>
+
+

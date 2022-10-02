@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <title>Users CRUD</title>
+</head>
+<body>
+    <h1>All Users</h1>
+    <form action ="/add-users" method = "Post">
+    <table class="table  table-bordered table-striped">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Full Name</th>
+                <th>Email</th>
+                <th>Created_At</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for one_user in all_users %}
+            <tr>
+                <td>{{one_user.id}}</td>
+                <td>{{one_user.first_name}} {{one_user.last_name}}</td>
+                <td>{{one_user.email}}</td>
+                <td>{{one_user.created_at}}</td>
+                <td><a href="/users/{{one_user.id}}">Show</a>
+                    <span>|</span>
+                    <a href="/users/{{one_user.id}}/edit">Edit</a>
+                    <span>|</span>
+                    <a href="/delete/user/{{one_user.id}}">Delete</a>
+                </td>
+            </tr>
+            {%endfor%}
+        </tbody>   
+    </table>
+    </form>
+    <a href='/new/users'>Add A User</a>
+
+</body>
+</html>

@@ -7,7 +7,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def render_boxes():
-    return render_template("checker.html",num = 8)
+    return render_template("checker.html",num=8, num2=8)
 
 @app.route('/row/<int:num2>')
 def render_boxes2(num2):

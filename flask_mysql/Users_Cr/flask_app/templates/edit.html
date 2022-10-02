@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Users CRUD</title>
+</head>
+<body>
+    <h2 style="display: inline-block">Edit User {{id}}</h2>
+    <a style="display: inline; margin-left: 150px;" href="/">Home</a>
+    <form action='/users/{{this_user.id}}/update_user' method='post'>
+        <input type="hidden" name="id" value="{{this_user.id}}">
+        <div style="margin-bottom: 20px" class="input-group mb-3">
+            <label for=""> First Name:</label>
+            <p><input type="text" id="" name="first_name" value="{{this_user.first_name}}">
+            </p>
+        </div>
+        <div style="margin-bottom: 20px" class="input-group mb-3">
+            <label for="">Last Name:  </label>
+            <p><input type="text" id="" name="last_name" value="{{this_user.last_name}}">
+            </p>
+        </div>
+        <div style="margin-bottom: 20px"    class="input-group mb-3">
+            <label for="">Email:  </label>
+            <p><input type="text" id="" name="email" value="{{this_user.email}}">
+            </p>
+        </div>
+        <input type="submit" value="Update">
+        <a  href='/users/{{this_user.id}}'>Show User</a>
+    </form>
+</body>
+</html>
