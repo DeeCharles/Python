@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Login Registration</h1>
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <div id="popup">
+                {% for message in messages %}
+                    <p>{{message}}</p>
+                {% endfor %}
+                <button onclick="popup.remove()">Okay</button>
+            </div>
+        {% endif %}
+    {% endwith %}
+    <div class="container">
+        <div class="row gx-5">
+            <div class="col-sm">
+                <div class="bg-dark text-white p-5">
+                    <h2>Register</h2>
+                    <form action="/register" method="post">
+                        <div class="form-group m-1">
+                            <label for="">First Name</label>
+                            <input type="text" class="form-control mt-2" name="first_name"/>
+                        </div>
+                        <div class="form-group m-1">
+                            <label for="">Last Name</label>
+                            <input type="text" class="form-control mt-2 "name="last_name" />
+                        </div>
+                        <div class="form-group m-1">
+                            <label for="">Email</label>
+                            <input type="email" class="form-control mt-2" name="email" />
+                        </div>
+                        <div class="form-group m-1">
+                            <label for="">Password</label>
+                            <input type="text" class="form-control mt-2" name="password" />
+                        </div>
+                        <div class="form-group m-1">
+                            <label for="">Confirm Password</label>
+                            <input type="text" class="form-control mt-2" name="confirm_password" />
+                        </div>
+                        <button class="btn btn-primary mt-2">Register</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <h2>Login</h2>
+    <form action="/users/login" method="post">
+        <label>
+            Email:
+            <input type="email" name="email">
+        </label>
+        <label>
+            Password:
+            <input type="password" name="password">
+        </label>
+        <input type="submit" value="Login">
+    </form>
+</body>
+</html>
